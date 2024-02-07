@@ -2,18 +2,18 @@ import "./App.css";
 
 // import Home from "./pages/Main";
 
-import { BrowserRouter as Router, Route, Routes, } from "react-router-dom";
+import { Route, Routes, } from "react-router-dom";
 import Home from "./screens/Home";
 import Signin from "./screens/Signin";
+import Users from "./screens/Users";
 
 function App() {
   return (  
-      <Router>
       <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/Signin" element={<Signin />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/Signin" element={<Signin />} />
+        <Route path="/Users" element={<Users />} />
       </Routes>
-        </Router>
 
   );
 }
