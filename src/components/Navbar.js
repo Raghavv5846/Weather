@@ -5,6 +5,7 @@ import { TfiLocationArrow } from "react-icons/tfi";
 import '../App.css'
 import img from '../pin.png'
 import { useWeather } from '../contextApi/WeatherContext';
+import { Link } from 'react-router-dom';
 const navigation = [
   { name: 'Dashboard', href: '/', current: true },
   { name: 'Users', href: 'users', current: false },
@@ -39,9 +40,9 @@ export default function Navbar(props) {
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
@@ -49,7 +50,7 @@ export default function Navbar(props) {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

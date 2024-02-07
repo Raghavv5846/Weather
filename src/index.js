@@ -9,9 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <WeatherContext>
-  <BrowserRouter>
+  
       <App />
-    </BrowserRouter>
+   
   </WeatherContext>
   
 );
